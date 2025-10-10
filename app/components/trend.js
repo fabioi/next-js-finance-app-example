@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+
 export default function Trend({
     type, amount, prevAmount
 }) {
@@ -10,12 +12,17 @@ export default function Trend({
     }
 
     const calcPercentageChange = (prevAmount, amount) => {
-        if (prevAmount === 0) {
+        if (!prevAmount || !amount) {
             return 0;
         }
 
         return ((amount - prevAmount) / prevAmount) * 100;
     }
+
+
+    const percentageChange = useMemo(() => calcPercentageChange(prevAmount, amount),
+        [prevAmount, amount]
+    );
 
     const formatCurrency = (amount) => {
         return new Intl.NumberFormat('it-IT', {
@@ -31,6 +38,9 @@ export default function Trend({
             </div>
             <div className="text-2xl font-bold text-black dark:text-white mb-2">
                 {formatCurrency(Number(amount ?? 0))}
+            </div>
+            <div>
+                {percentageChange.toFixed(2)}% vs last period
             </div>
         </div>
     )
