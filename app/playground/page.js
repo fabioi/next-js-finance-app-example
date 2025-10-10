@@ -18,6 +18,9 @@ export default function Page() {
                 <hr className="mb-4 border-gray-200 dark:border-gray-800" />
                 <div className="flex space-x-4">
                     <Trend type="Income" amount={1000} prevAmount={1000} />
+                    <Trend type="Expense" amount={1000} prevAmount={1200} />
+                    <Trend type="Investment" amount={1000} prevAmount={700} />
+                    <Trend type="Savings" amount={1000} prevAmount={500} />
                 </div>
             </div>
         </>
