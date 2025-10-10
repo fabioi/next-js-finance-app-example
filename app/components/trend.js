@@ -1,3 +1,4 @@
+import { ArrowDownLeft, ArrowUpRight } from "lucide-react";
 import { useMemo } from "react";
 
 export default function Trend({
@@ -40,7 +41,7 @@ export default function Trend({
                 {formatCurrency(Number(amount ?? 0))}
             </div>
             <div className="flex space-x-1 items-center text-sm">
-
+                {percentageChange <= 0 ? <ArrowDownLeft className="w-4 h-4 text-red-500 dark:text-red-300" /> : <ArrowUpRight className="w-4 h-4 text-green-500 dark:text-green-300" />}
                 {percentageChange.toFixed(2)}% vs last period
             </div>
         </div>
