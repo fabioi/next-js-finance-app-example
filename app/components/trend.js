@@ -7,7 +7,7 @@ export default function Trend({
 }) {
 
     const colorClasses = {
-        Income: 'text-green-700 dark:text-green-300',
+        Income: 'text-green-700 dark:texpt-green-300',
         Expense: 'text-red-700 dark:text-red-300',
         Investment: 'text-indigo-700 dark:text-indigo-300',
         Savings: 'text-yellow-700 dark:text-yellow-300',
