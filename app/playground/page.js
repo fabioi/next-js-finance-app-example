@@ -28,12 +28,12 @@ export default function Page() {
             <div>
                 <h2 className="mb-4 text-lg font-mono">TransactionItem</h2>
                 <hr className="mb-4 border-gray-200 dark:border-gray-800" />
-                <div className="">
+                <div className="space-y-4">
                     <TransactionItem type="Income" description="Salary" amount={1200} />
                     <TransactionItem type="Saving" description="Savings" amount={500} />
                     <TransactionItem type="Expense" category="Food" description="Rent" amount={29} />
                 </div>
-            </div>
+            </div >
         </>
     )
 }

@@ -1,4 +1,9 @@
+import { useFormatCurrency } from "@/hooks/use-format-currency";
+
 export default function TransactionItem({ type, category, description, amount }) {
+      const formatAmount = useFormatCurrency(amount);
+
+
       return (
             <div className="flex w-full items-center">
                   <div className="flex items-center mr-4 grow">
@@ -13,8 +18,8 @@ export default function TransactionItem({ type, category, description, amount })
                         )}
                   </div>
 
-            <div> {amount}</div>
-            <div>...</div>
-      </div>
+                  <div className="min-w-[70px] text-right"> {formatAmount}</div>
+                  <div className="min-w-[50px] flex justify-end">...</div>
+            </div>
       )
 }
