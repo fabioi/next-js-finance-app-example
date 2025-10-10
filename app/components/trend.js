@@ -1,3 +1,4 @@
+import { useFormatCurrency } from "@/hooks/use-format-currency";
 import { ArrowDownLeft, ArrowUpRight } from "lucide-react";
 import { useMemo } from "react";
 
@@ -25,12 +26,7 @@ export default function Trend({
         [prevAmount, amount]
     );
 
-    const formatCurrency = (amount) => {
-        return new Intl.NumberFormat('it-IT', {
-            style: 'currency',
-            currency: 'EUR',
-        }).format(amount);
-    }
+    const formattedAmount = useFormatCurrency(amount);
 
     return (
         <div>
@@ -38,7 +34,7 @@ export default function Trend({
                 <div className={`font-semibold ${colorClasses[type]}`}>{type} </div>
             </div>
             <div className="text-2xl font-bold text-black dark:text-white mb-2">
-                {formatCurrency(Number(amount ?? 0))}
+                {formattedAmount}
             </div>
             <div className="flex space-x-1 items-center text-sm">
                 {percentageChange <= 0 ? <ArrowDownLeft className="w-4 h-4 text-red-500 dark:text-red-300" /> : <ArrowUpRight className="w-4 h-4 text-green-500 dark:text-green-300" />}
