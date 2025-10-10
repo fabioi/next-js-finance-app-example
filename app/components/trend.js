@@ -39,7 +39,8 @@ export default function Trend({
             <div className="text-2xl font-bold text-black dark:text-white mb-2">
                 {formatCurrency(Number(amount ?? 0))}
             </div>
-            <div>
+            <div className="flex space-x-1 items-center text-sm">
+
                 {percentageChange.toFixed(2)}% vs last period
             </div>
         </div>
