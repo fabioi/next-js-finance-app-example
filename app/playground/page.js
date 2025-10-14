@@ -56,6 +56,9 @@ export default function Page() {
                     <Button> Hello </Button>
                     <Button variant="outline"> Hello </Button>
                     <Button variant="ghost"> Hello </Button>
+                    <Button size="xs"> Hello </Button>
+                    <Button size="base"> Hello </Button>
+                    <Button size="large"> Hello </Button>
 
                 </div>
             </div>
