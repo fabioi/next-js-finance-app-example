@@ -7,7 +7,6 @@ export default function PageHeader({className}) {
                 App </Link>
 
             <div className="flex items-center space-x-4">
-                <div>Mode Toggle</div>
                 <div>User dropdown</div>
             </div>
         </header>
