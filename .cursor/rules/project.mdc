@@ -1,0 +1,89 @@
+---
+alwaysApply: true
+---
+# Next.js 14 Finance App
+
+Un'applicazione finanziaria moderna costruita con Next.js 15 e React 19, progettata per tracciare e visualizzare entrate, spese, risparmi e investimenti.
+
+## 🚀 Caratteristiche Principali
+
+- **Dashboard Finanziaria**: Visualizzazione completa delle transazioni finanziarie
+- **Gestione Transazioni**: Supporto per 4 tipi di transazioni:
+  - 💰 Entrate (Income)
+  - 💸 Spese (Expense)
+  - 🐷 Risparmi (Saving)
+  - 🏛️ Investimenti (Investment)
+- **Tema Scuro/Chiaro**: Cambio tema con supporto per preferenze di sistema
+- **Formattazione Valuta**: Formattazione automatica in EUR (formato italiano)
+- **Trend e Statistiche**: Visualizzazione percentuali di cambiamento rispetto al periodo precedente
+- **Design Responsive**: Ottimizzato per desktop e mobile
+
+## 🛠️ Stack Tecnologico
+
+### Core
+- **Next.js** 15.5.4 con Turbopack
+- **React** 19.1.0
+- **React DOM** 19.1.0
+
+### Styling
+- **Tailwind CSS** 4
+- **Font**: Geist Sans & Geist Mono (Google Fonts)
+
+### Librerie UI
+- **next-themes** 0.4.6 - Gestione tema dark/light
+- **lucide-react** 0.545.0 - Icone moderne
+
+### Development Tools
+- **ESLint** 9 con configurazione Next.js
+- **@tailwindcss/postcss** 4
+
+## 📦 Installazione
+
+```bash
+# Clona il repository
+git clone <repository-url>
+
+# Naviga nella directory
+cd next-14-finance-app
+
+# Installa le dipendenze
+npm install
+```
+
+## 🚀 Comandi Disponibili
+
+```bash
+# Avvia il server di sviluppo con Turbopack
+npm run dev
+
+# Build di produzione con Turbopack
+npm run build
+
+# Avvia il server di produzione
+npm start
+
+# Esegui il linter
+npm run lint
+```
+
+L'applicazione sarà disponibile su [http://localhost:3000](http://localhost:3000)
+
+## 📁 Struttura del Progetto (in evoluzione e da tenere aggiornata)
+next-14-finance-app/
+├── app/                        # App Router di Next.js
+│   ├── dashboard/             # Pagina dashboard
+│   ├── playground/            # Area di test/sperimentazione
+│   ├── globals.css            # Stili globali
+│   ├── layout.js              # Layout principale
+│   └── page.js                # Home page
+├── components/                # Componenti React riutilizzabili
+│   ├── button.js             # Componente pulsante
+│   ├── page-header.js        # Header di pagina
+│   ├── theme-provider.js     # Provider per il tema
+│   ├── theme-toggle.js       # Toggle tema dark/light
+│   ├── transaction-item.js   # Item singola transazione
+│   ├── transaction-summary-item.js
+│   └── trend.js              # Componente trend/statistiche
+├── hooks/                    # Custom React Hooks
+│   └── use-format-currency.js # Hook per formattazione valuta
+└── public/                   # Asset statici
