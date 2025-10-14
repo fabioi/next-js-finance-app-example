@@ -5,7 +5,7 @@ import TransactionSummaryItem from '@/components/transaction-summary-item';
 import Button from "@/components/button";
 
 export default function Page() {
-    return (<main className="space-y-8">
+    return (<main className="space-y-8 mb-44">
             <h1 className="text-4xl mt-8">Playground</h1>
 
             <div>
@@ -54,6 +54,9 @@ export default function Page() {
                 <hr className="mb-4 border-gray-200 dark:border-gray-800"/>
                 <div className="space-x-4">
                     <Button> Hello </Button>
+                    <Button variant="outline"> Hello </Button>
+                    <Button variant="ghost"> Hello </Button>
+
                 </div>
             </div>
         </main>)

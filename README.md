@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js 14 Finance App
 
-## Getting Started
+Un'applicazione finanziaria moderna costruita con Next.js 15 e React 19, progettata per tracciare e visualizzare entrate, spese, risparmi e investimenti.
 
-First, run the development server:
+## 🚀 Caratteristiche Principali
+
+- **Dashboard Finanziaria**: Visualizzazione completa delle transazioni finanziarie
+- **Gestione Transazioni**: Supporto per 4 tipi di transazioni:
+  - 💰 Entrate (Income)
+  - 💸 Spese (Expense)
+  - 🐷 Risparmi (Saving)
+  - 🏛️ Investimenti (Investment)
+- **Tema Scuro/Chiaro**: Cambio tema con supporto per preferenze di sistema
+- **Formattazione Valuta**: Formattazione automatica in EUR (formato italiano)
+- **Trend e Statistiche**: Visualizzazione percentuali di cambiamento rispetto al periodo precedente
+- **Design Responsive**: Ottimizzato per desktop e mobile
+
+## 🛠️ Stack Tecnologico
+
+### Core
+- **Next.js** 15.5.4 con Turbopack
+- **React** 19.1.0
+- **React DOM** 19.1.0
+
+### Styling
+- **Tailwind CSS** 4
+- **Font**: Geist Sans & Geist Mono (Google Fonts)
+
+### Librerie UI
+- **next-themes** 0.4.6 - Gestione tema dark/light
+- **lucide-react** 0.545.0 - Icone moderne
+
+### Development Tools
+- **ESLint** 9 con configurazione Next.js
+- **@tailwindcss/postcss** 4
+
+## 📦 Installazione
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clona il repository
+git clone <repository-url>
+
+# Naviga nella directory
+cd next-14-finance-app
+
+# Installa le dipendenze
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Comandi Disponibili
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+# Avvia il server di sviluppo con Turbopack
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Build di produzione con Turbopack
+npm run build
 
-## Learn More
+# Avvia il server di produzione
+npm start
 
-To learn more about Next.js, take a look at the following resources:
+# Esegui il linter
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+L'applicazione sarà disponibile su [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Struttura del Progetto
 
-## Deploy on Vercel
+```
+next-14-finance-app/
+├── app/                        # App Router di Next.js
+│   ├── dashboard/             # Pagina dashboard
+│   ├── playground/            # Area di test/sperimentazione
+│   ├── globals.css            # Stili globali
+│   ├── layout.js              # Layout principale
+│   └── page.js                # Home page
+├── components/                # Componenti React riutilizzabili
+│   ├── button.js             # Componente pulsante
+│   ├── page-header.js        # Header di pagina
+│   ├── theme-provider.js     # Provider per il tema
+│   ├── theme-toggle.js       # Toggle tema dark/light
+│   ├── transaction-item.js   # Item singola transazione
+│   ├── transaction-summary-item.js
+│   └── trend.js              # Componente trend/statistiche
+├── hooks/                    # Custom React Hooks
+│   └── use-format-currency.js # Hook per formattazione valuta
+└── public/                   # Asset statici
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Componenti Principali
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### TransactionItem
+Visualizza una singola transazione con:
+- Icona specifica per tipo
+- Descrizione
+- Categoria (nascosta su mobile)
+- Importo formattato
+
+### Trend
+Mostra statistiche con:
+- Importo corrente
+- Percentuale di cambiamento
+- Indicatore visivo (freccia su/giù)
+
+### ThemeToggle
+Toggle per cambio tema con:
+- Icona sole/luna
+- Transizione fluida
+- Supporto SSR (no flash)
+
+## 🎨 Tema
+
+L'app supporta:
+- **Light Mode**: Sfondo bianco
+- **Dark Mode**: Sfondo slate-950
+- **System Mode**: Segue le preferenze del sistema
+
+La preferenza viene salvata nel localStorage con chiave `theme`.
+
+## 💱 Formattazione Valuta
+
+Tutte le valute sono formattate in:
+- **Valuta**: EUR (€)
+- **Locale**: it-IT (italiano)
+- **Hook**: `useFormatCurrency`
+
+## 🚧 Sviluppo
+
+### Turbopack
+Il progetto usa Turbopack per tempi di build più veloci in development e production.
+
+### ESLint
+La configurazione ESLint include le best practice di Next.js.
+
+## 📄 Licenza
+
+Private - Non specificata
+
+## 🤝 Contributi
+
+[Aggiungi le tue linee guida per i contributi]
+
+---
+
+Costruito con ❤️ usando Next.js 15
