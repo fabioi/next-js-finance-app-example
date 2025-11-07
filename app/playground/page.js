@@ -1,6 +1,9 @@
 import Button from '@/components/button';
+import Checkbox from '@/components/checkbox';
+import Input from '@/components/input';
 import Label from '@/components/label';
 import PageHeader from '@/components/page-header';
+import Select from '@/components/select';
 import TransactionItem from '@/components/transaction-item';
 import TransactionSummaryItem from '@/components/transaction-summary-item';
 import Trend from '@/components/trend';
@@ -71,21 +74,21 @@ export default function Page() {
                 <div className="grid grid-cols-2 gap-4">
                     <div>
                         <label className="text-gray-700 dark:text-gray-300 block mb-1">Your name</label>
-                        <input type="text" placeholder="Type something in here..." className="w-full rounded-md shadow-sm border-gray-300 bg-white dark:border-gray-700 dark:bg-gray-950" />
+                        <Input type="text" placeholder="Type something in here..." />
                     </div>
 
                     <div>
                         <label className="text-gray-700 dark:text-gray-300 block mb-1">City</label>
-                        <select className="w-full rounded-md shadow-sm border-gray-300 bg-white dark:border-gray-700 dark:bg-gray-950">
+                        <Select>
                             <option>Warsaw</option>
                             <option>Berlin</option>
                             <option>London</option>
-                        </select>
+                        </Select>
                     </div>
 
                     <div className="flex items-center">
                         <Label className="flex items-center">
-                            <input id="terms" type="checkbox" className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:text-blue-500 dark:focus:ring-blue-400" />
+                            <Checkbox id="terms" />
                             <span className="ml-2">City</span>
                         </Label>
                     </div>
