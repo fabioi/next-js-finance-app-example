@@ -1,4 +1,5 @@
 import Button from '@/components/button';
+import Label from '@/components/label';
 import PageHeader from '@/components/page-header';
 import TransactionItem from '@/components/transaction-item';
 import TransactionSummaryItem from '@/components/transaction-summary-item';
@@ -84,8 +85,7 @@ export default function Page() {
 
                     <div className="flex items-center">
                         <input type="checkbox" className="rounded border-gray-300 text-gray-700 bg-white dark:bg-gray-950 dark:text-gray-500 shadow-sm" />
-
-                        <label className="text-gray-700 dark:text-gray-300 ml-2">City</label>
+                        <Label className="ml-2">City</Label>
                     </div>
                 </div>
             </div>
