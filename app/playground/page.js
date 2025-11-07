@@ -84,8 +84,10 @@ export default function Page() {
                     </div>
 
                     <div className="flex items-center">
-                        <input type="checkbox" className="rounded border-gray-300 text-gray-700 bg-white dark:bg-gray-950 dark:text-gray-500 shadow-sm" />
-                        <Label className="ml-2">City</Label>
+                        <Label className="flex items-center">
+                            <input id="terms" type="checkbox" className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 dark:border-gray-600 dark:text-blue-500 dark:focus:ring-blue-400" />
+                            <span className="ml-2">City</span>
+                        </Label>
                     </div>
                 </div>
             </div>
